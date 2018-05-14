@@ -26,7 +26,7 @@ else echo "no node project is running"
 fi
 
 # 安装依赖
-# npm_install=`npm install`
+npm_install=`npm install`
 if [[ $? -eq 0 ]]; then
 echo "installing packages successful: $npm_install"
 fi
