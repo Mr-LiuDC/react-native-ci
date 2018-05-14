@@ -19,6 +19,7 @@ else
 fi
 
 # 杀掉原有node进程
+# ps -ef | grep node | grep -v grep | awk '{print $2}' | xargs kill -9
 kill_node=`killall node`
 if [[ $? -eq 0 ]]; then
 echo "killed node process"
@@ -34,7 +35,7 @@ fi
 # 启动node服务
 echo "开始启动node服务"
 npm_start=`npm start`
-if [[ $? -eq 0 ]]; then
+if [[ $? -ne 0 ]]; then
 echo "node服务启动成功"
 fi
 exit 0
