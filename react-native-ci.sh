@@ -26,9 +26,15 @@ else echo "no node project is running"
 fi
 
 # 安装依赖
-npm_install=`npm install`
+# npm_install=`npm install`
+if [[ $? -eq 0 ]]; then
+echo "installing packages successful: $npm_install"
+fi
 
 # 启动node服务
+echo "开始启动node服务"
 npm_start=`npm start`
-
-echo 'start successfully'
+if [[ $? -eq 0 ]]; then
+echo "node服务启动成功"
+fi
+exit 0
