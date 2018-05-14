@@ -36,4 +36,7 @@ npm_start=`npm start`
 if [[ $? -eq 0 ]]; then
 echo "node服务启动成功"
 fi
-exit 0
+
+npm_start > ${dir}/start.log &
+
+echo 'start successfully'
