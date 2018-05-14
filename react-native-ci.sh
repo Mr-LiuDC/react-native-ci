@@ -39,7 +39,8 @@ fi
 
 # 启动node服务
 echo "开始启动node服务"
-npm_start=`npm start`
+# npm_start=`npm start`
+npm_start=`nohup npm start > log.txt &`
 if [[ $? -ne 0 ]]
 then
   echo "node服务启动成功"

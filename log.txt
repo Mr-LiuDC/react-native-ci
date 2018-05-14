@@ -1,0 +1,23 @@
+
+> ReactNativeTest@0.0.1 start D:\Code\GitHub\react-native-ci
+> node node_modules/react-native/local-cli/cli.js start
+
+Scanning folders for symlinks in D:\Code\GitHub\react-native-ci\node_modules (127ms)
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│  Running Metro Bundler on port 8081.                                         │
+│                                                                              │
+│  Keep Metro running while developing on any JS projects. Feel free to        │
+│  close this tab and run your own Metro instance if you prefer.               │
+│                                                                              │
+│  https://github.com/facebook/react-native                                    │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Looking for JS files in
+   D:\Code\GitHub\react-native-ci 
+
+
+Metro Bundler ready.
+
+Loading dependency graph, done.
