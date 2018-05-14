@@ -27,16 +27,8 @@ fi
 
 # 安装依赖
 npm_install=`npm install`
-if [[ $? -eq 0 ]]; then
-echo "installing packages: $npm_install"
-fi
 
 # 启动node服务
 npm_start=`npm start`
-if [[ $? -eq 0 ]]; then
-echo "node服务启动成功"
-fi
-
-npm_start > ${dir}/start.log &
 
 echo 'start successfully'
