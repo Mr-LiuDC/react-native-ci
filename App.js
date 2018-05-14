@@ -30,7 +30,7 @@ export default class App extends Component<Props> {
           刘德财
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit App.js. 哈哈
+          To get started, edit App.js.
         </Text>
         <Text style={styles.instructions}>
           {instructions}
