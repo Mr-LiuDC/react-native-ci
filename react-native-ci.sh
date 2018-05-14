@@ -19,23 +19,32 @@ else
 fi
 
 # 杀掉原有node进程
-# ps -ef | grep node | grep -v grep | awk '{print $2}' | xargs kill -9
-kill_node=`killall node`
-if [[ $? -eq 0 ]]; then
-echo "killed node process"
-else echo "no node project is running"
+kill_node=`ps -ef | grep node | grep -v grep | awk '{print $2}' | xargs kill -9`
+# kill_node=`killall node`
+if [[ $? -eq 0 ]]
+then
+  echo "killed node process"
+else
+  echo "no node project is running"
 fi
 
 # 安装依赖
 npm_install=`npm install`
-if [[ $? -eq 0 ]]; then
-echo "installing packages successful: $npm_install"
+if [[ $? -eq 0 ]]
+then
+  echo "installing packages successful: $npm_install"
+else
+  echo "installing packages failed: $npm_install"
 fi
 
 # 启动node服务
 echo "开始启动node服务"
 npm_start=`npm start`
-if [[ $? -ne 0 ]]; then
-echo "node服务启动成功"
+if [[ $? -ne 0 ]]
+then
+  echo "node服务启动成功"
+else
+  echo "node服务启动失败"
 fi
+
 exit 0
